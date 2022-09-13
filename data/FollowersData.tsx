@@ -1,7 +1,7 @@
 import image1 from '../public/img1.png'
 import image2 from '../public/img2.png'
 import image3 from '../public/img3.png'
-import image4 from '../public/img4.png'
+import image4 from '../public/img4.jpg'
 
 export const Follower = [
     {
@@ -22,10 +22,4 @@ export const Follower = [
         username: '@thompsontate',
         button: 'Follow',
     },
-    {
-        image: image4,
-        name: 'thompson mate',
-        username: '@thompsontate',
-        button: 'Follow',
-    }
 ]

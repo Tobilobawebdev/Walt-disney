@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
+import { Follower } from '../data/FollowersData'
 import cover from '../public/cover.jpg'
 import profile from '../public/profileImg.jpg'
 
 const SideBar = () => {
   return (
-    <div className='col-span-2  '>
+    <div className='hidden  md:block col-span-2  '>
       {/* top section */}
       <div className='mx-1.5 rounded-xl cursor-pointer dark:bg-gray-900 border-2 dark:border-none'>
       <div className='bg-white rounded-lg overflow-hidden relative flex flex-col items-center text-center border border-gray-300 dark:border-none '>
@@ -36,8 +37,16 @@ const SideBar = () => {
             <span className='text-blue-500 text-sm leading-3 hover:underline text-center flex justify-center pb-3'>My Profile</span>
       </div>
         {/* Who to Folllow */}
-        <div className='mx-1.5 rounded-xl mt-4 cursor-pointer dark:bg-gray-900 border-2 dark:border-none'>
-           <span className='text-lg font-semibold text-black dark:text-white'>Who to follow</span>
+        <div className='mx-1.5 rounded-xl mt-4 px-2.8 py-1.5 cursor-pointer dark:bg-gray-900 border-2 dark:border-none'>
+           <span className='text-lg mb-2 font-semibold text-black dark:text-white'>Who to follow</span>
+           {Follower.map((list,id) => (
+            <div className=' flex mb-4 items-center justify-center space-x-0.5' key={id}> 
+              <Image src={list.image} width={45} height={45} objectFit='contain' alt='' />
+              <span  className='text-center mb-4 text-xs font-bold'>{list.name}</span>
+              <button className='bg-blue-600 mb-4 px-2 py-0.5 rounded-full text-white font-bold text-sm'>{list.button}</button>
+            </div>
+           ))}
+           <span className='text-blue-600 hover:underline text-sm font-bold mb-4'>Show More</span>
       </div>
     </div>
   )

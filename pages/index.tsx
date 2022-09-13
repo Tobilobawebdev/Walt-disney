@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
      <main>
       <Header />
-      <section className='grid mt-3 gap-3 grid-cols-9'>
+      <section className='grid mx-auto mt-3 gap-3 grid-cols-9'>
         {/* sidebar */}
         <SideBar />
          {/*post */}

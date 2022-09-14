@@ -10,6 +10,7 @@ import { FaSmileWink,
     import { CgMenuGridO } from 'react-icons/cg'
     import  profile from '../public/profileImg.jpg'
 import Image from 'next/image';
+import hash from '../assests/hashtag.svg'
 import { motion } from 'framer-motion';
 
 const spring = {
@@ -49,7 +50,9 @@ const Header = () => {
         <div className={style.leftWrap}>
             <BsTwitter className='text-blue-600' size={34} />
             <div className={style.inputWrap}>
-                <FaSearch size={15}/>
+                <div className='h-4 w-4 obect-contain'>
+                <Image src={hash} layout='intrinsic' alt=''/>
+                </div>
                 <input type="text"
                 className={style.input}
                  placeholder='Whats happening'/>
